@@ -1,6 +1,6 @@
 // async/await
 
-const API_URL = 'http://localhost:3000'
+const API_URL = 'https://helpdesk-backend-r5xf.onrender.com'
 
 // ==============================================
 // CARREGAR CHAMADOS DA API
