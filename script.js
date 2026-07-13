@@ -67,7 +67,7 @@ async function fecharChamado(id) {
         const resposta = await fetch(`${API_URL}/chamados/${id}`, {
             method: 'DELETE',
             headers: {
-                'Autorization': `Bearer ${token}`
+                'Authorization': `Bearer ${token}`
             }
         });
 
