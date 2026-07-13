@@ -63,6 +63,7 @@ function renderizarChamados(chamados) {
 
 async function fecharChamado(id) {
     try {
+        const token = localStorage.getItem('token');
         const resposta = await fetch(`${API_URL}/chamados/${id}`, {
             method: 'DELETE',
             headers: {
