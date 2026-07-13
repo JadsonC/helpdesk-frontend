@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Suporte - HelpDesk</title>
+    <a id="link-login" href="login.html" class="btn btn-outline-primary btn-sm">Entrar</a>
+    <a id="link-logout" href="#" class="btn btn-outline-secondary btn-sm" style="display: none;">Sair</a>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container py-5">
+        <header class="text-center mb-5">
+            <h1>Painel de Controle - HelpDesk</h1>
+            <p class="text-muted">Gerenciamento de chamados técnicos</p>
+        </header>
+        <section class="card shadow-sm p-4 mb-5">
+            <h2 class="h4 mb-4">Abrir novo chamado</h2>
+
+            <form id="form-chamado"> 
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="nome" class="form-label">Nome do Usuário:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Ex: João Silva">
+                        <div id="erro-nome" class="text-danger small mt-1" style="display: none;">Nome é obrigatório</div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label">E-mail de Contato: </label>
+                        <input type="email" id="email" name="email" placeholder="joao@empresa.com">
+                        <div id="erro-email" class="text-danger small mt-1" style="display: none;">Email é obrigatório</div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="sistema" class="form-label">Sistema / Sistema Operacional:</label>
+                        <select name="sistema" id="sistema" class="form-select">
+                            <option value="Windows">Windows</option>
+                            <option value="Linux">Linux</option>
+                            <option value="Sistema Interno">Sistema Interno</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="gravidade">Gravidade do Problema:</label>
+                        <select name="gravidade" id="gravidade">
+                            <option value="baixa">Baixa - Dúvida ou Ajuste</option>
+                            <option value="alta">Alta - Sistema Parado</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <label for="assunto" class="form-label">Assunto do Chamado:</label>
+                        <input type="text" id="assunto" name="assunto" placeholder="Resumo direto do problema" class="form-control">
+                        <div id="erro-assunto" class="text-danger small mt-1" style="display: none;">Assunto é obrigatório</div>
+                    </div>
+
+                    <div class="col-12 mb-4">
+                        <label for="descricao" class="form-label">Descrição Detalhada:</label>
+                        <textarea name="descricao" id="descricao" placeholder="Descreva aqui o que aconteceu..."
+                            class="form-control"></textarea>
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Enviar Chamado</button>
+                    </div>
+                </div>
+            </form>
+
+        </section>
+        <section>
+            <h2 class="h4 mb-4">Chamados Ativos</h2>
+            <ul id="lista-chamados" class="list-unstyled">
+            </ul>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
